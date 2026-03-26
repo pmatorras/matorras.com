@@ -1,0 +1,536 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #2c3e50;
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 98vw;
+    /* Almost the entire viewport width */
+    padding: 1.2em 0.3em;
+    /* Less padding on all sides */
+    margin: 1em auto;
+    /* Reduced vertical margin */
+    border-radius: 8px;
+    /* Slightly rounder corners */
+    box-sizing: border-box;
+  }
+}
+
+.section-title {
+  background: #f7f7f7;
+  padding: 0.5em 0.5em 0.5em;
+  margin-top: 3em;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 40pt auto;
+  padding: 3em;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #ccc;
+  text-align: left;
+}
+
+.left-right-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  /* space after this block */
+}
+.lead {
+  font-size: 1.15em;    
+  color: #34495e;         
+  line-height: 1.3;      
+  margin-bottom: 1em;     
+  margin-top: 1em;      
+
+}
+
+
+li.no-bullet {
+  list-style-type: none;
+  /* Removes bullet for this specific li */
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+  display: block;       /* Make the image a block element */
+  margin-left: auto;    /* Automatic left margin */
+  margin-right: auto;   /* Automatic right margin */
+}
+.cover-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../img/cover-image.webp');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  /* Puts it "under" everything */
+}
+
+p {
+  text-align: left;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 0;
+  text-align: left;
+}
+
+li {
+  margin: 8px 25px;
+}
+
+li::marker {
+  content: '\25C6\2003';
+  /* Your custom symbol */
+  font-size: 0.9em;
+  color: #555;
+}
+
+li li::marker {
+  content: '\25A0\2003';
+  /* Your custom symbol */
+  font-size: 0.9em;
+  color: #333;
+}
+
+li li {
+  margin: 4px 30px;
+}
+
+
+
+ul.about-icons li {
+  margin-bottom: 0.5em;  /* Smaller vertical separation (was ~1em) */
+}
+
+
+ul.about-icons li a {
+  font-size: 1.2rem;    /* Bigger text */
+  font-weight: 600;      /* Bolder but not heavy */
+}
+.about-icons a {
+  color: #2980b9;
+  font-size: 1em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.about-icons a:hover {
+  color: #1abc9c;
+}
+h1 {
+  text-align: center;
+  color: #1e3a8a;  /* Matches strong; boldest title */
+  font-weight: 700;
+  text-shadow: 4px 4px 4px rgba(0,0,0,0.08);
+}
+h2 {
+  text-align: center;
+  color: #1e3a8a;  /* Keep body color; neutral sections */
+}
+
+
+ul.contact-icons {
+  list-style-type: none;
+  /* Remove bullets */
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margin */
+  text-align: center;
+  /* Optional: align text left */
+}
+
+ul.contact-icons li {
+  display: inline-block;
+  /* Make list items appear in one line */
+  margin: 10px 10px;
+  /* Space between items */
+}
+
+.contact-icons a {
+  color: #333;
+  font-size: 1em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-icons a:hover {
+  color: #2a8fd5;
+  /* your accent color */
+}
+
+.container.backtop {
+  text-align: center;
+}
+
+.container.backtop a {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0em 0;
+}
+/* Monospace font family for all code */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Block code */
+pre {
+  background: #0d1117;          /* dark background */
+  color: #c9d1d9;               /* light foreground */
+  border: 1px solid #30363d;    /* subtle border */
+  border-radius: 8px;
+  padding: 1rem;
+  overflow: auto;               /* horizontal scroll when needed */
+  line-height: 1.5;
+  tab-size: 2;
+}
+
+/* Remove double background on nested code */
+pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* Inline code */
+code {
+  background: #161b22;
+  color: #e6edf3;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+}
+
+
+  .intro { /* like container but slightly wider*/
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1.5em;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    line-height: 1.6;
+    color: #2c3e50;
+  }
+
+.dashboard-container {
+  /* match the intro’s width */
+  width: 100%;
+  max-width: 800px;
+  margin: 2em auto;        /* same vertical spacing + centered */
+  
+  /* enforce square shape */
+  aspect-ratio: 1 / 1;
+
+  /* styling */
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;        /* clip any overflow */
+}
+
+.dashboard-container iframe {
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+
+.features-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.features-table th {
+  background-color: #f5f5f5;
+  padding: 15px;
+  color: #1a1a1a;   
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+.features-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  line-height: 1.6;
+}
+
+.features-table em {
+  color: #666;
+  font-size: 0.9em;
+}
+.summary-table {
+  margin: 20px auto;  /* Center horizontally */
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 700px;  /* Optional: prevent too-wide tables */
+}
+.summary-table th,
+.summary-table td {
+  padding: 12px 20px;
+  text-align: center;  /* Center cell content */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.summary-table th {
+  font-weight: bold;
+  font-weight: 650;  /* Slightly heavier, not full bold */
+  font-size: 1.15em;  /* Slightly bigger */
+
+  background-color: #f5f5f5;
+}
+.summary-table td {
+  font-weight: 550;  /* Slightly heavier, not full bold */
+  color: #1a1a1a;   /* Slightly darker for emphasis */
+}
+.result-chart {
+  display: block;
+  margin: 30px auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.result-chart-container {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.result-chart-container figcaption {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+
+
+.back-link {
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 1.25rem;  /* Slightly bigger */
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #333;
+}
+
+/* Project Status Subtitle */
+.project-status {
+    display: block;             /* Forces it to its own line */
+    font-size: 0.85rem;         /* Smaller than body text */
+    text-transform: uppercase;  /* Makes it look like a label */
+    letter-spacing: 1.5px;      /* Adds elegance */
+    color: #888;                /* Neutral gray, matches everything */
+    margin-bottom: 5px;         /* Tight spacing to the main H1 */
+    font-weight: 600;
+}
+
+/* Photography Gallery Styles */
+#photography .container {
+  max-width: 1200px;
+  padding: 2rem 1rem;
+}
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.photo-item {
+  flex: 1 1 300px;
+  max-width: 350px;
+  text-align: center;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  /* Remove loading: lazy; -- it's HTML only */
+}
+
+.photo-item img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-size: 0.95em;
+  color: #555;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .photo-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* LIGHTBOX OVERLAY (Hidden by default) */
+.lightbox {
+  display: none;                
+  position: fixed;              
+  z-index: 9999;                
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);  
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox:target {
+  display: flex;                
+}
+
+
+.lightbox::before {
+  content: attr(data-caption);
+  position: absolute;
+  bottom: 30px;
+  left: 10vw;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+  pointer-events: none;
+  z-index: 10000;
+  background: rgba(58, 64, 141, 0.1);  
+  padding: 1rem 1rem;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);  
+  max-width: 78vw;
+  margin: 0 auto;
+}
+
+
+.lightbox img {
+  width: auto;              
+  height: auto;             
+  object-fit: contain;      
+  cursor: default;          
+  max-width: 90vw;          
+  max-height: 90vh;         
+  
+  box-shadow: 0 0 0 #0425e080;
+  border-radius: 4px;
+}
+
+
+/* CLOSE BUTTON (X) */
+.lightbox::after {
+  content: "×";
+  position: absolute;
+  top: 20px; right: 30px;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  pointer-events: none;         
+}
+
+strong { 
+  color: #1e3a8a;  /* Subtle green; or #2c3e50 to match body */
+  font-weight: 700;  /* Bolder than 600 */
+}
+a {
+  text-decoration: none;
+  color: #2980b9;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #1abc9c;
+}
+em { 
+  color: #e67e22; 
+  font-style: italic; 
+}
+
+/* Override - applies ONLY inside work/education lists */
+#work-experience em, 
+#education em {
+    color: #333; /* Grey */
+}
+
+
+
+h3 { 
+  color: #333;  
+  font-weight: 600;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.project-links a {
+    flex: 1; /* Makes each link take equal width */
+    text-align: center;
+}
+.btn-secondary .fa-github {
+    color: #333;
+}
+
+.projects-row {
+  display: flex;
+  gap: 5%; /* Fixes edges/spacing, no empty cell needed */
+  margin: -1.2rem 0;
+}
+
+.project-card {
+  flex: 1; /* Equal split: 49% each effectively */
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px #ccc;
+  vertical-align: top;
+}
+
+@media (max-width: 600px) {
+  .projects-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+
